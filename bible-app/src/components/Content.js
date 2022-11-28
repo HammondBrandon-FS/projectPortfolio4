@@ -1,9 +1,9 @@
-//Child/Dummy Header.js
+//Child/Dummy Content.js
 //Parent - App.js
 
 import React from 'react';
 
-const Header = props => {
+const Content = props => {
     return (
         <div style={styles.container}>
             <ul>
@@ -15,7 +15,7 @@ const Header = props => {
     );
 }
 
-export default Header;
+export default Content;
 
 const styles = {
     container: {
