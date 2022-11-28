@@ -25,22 +25,45 @@ function App() {
       }
     });
     const data = await response.json();
+
     // Set array in state
     setBibles({
-      items: data.data
+      items: sortBibles(data.data)
     });
+    console.log(data.data);
+  }
+
+  // Sort bibles by name of language
+  function sortBibles(data) {
+    data.sort((a, b) => {
+      const nameA = a.language.name.toUpperCase();
+      const nameB = b.language.name.toUpperCase();
+      if (nameA < nameB) {
+        return -1;
+      }
+      if (nameA > nameB) {
+        return 1;
+      }
+      return 0;
+    });
+    
+    return data;
   }
 
   // getData after render using useEffect
   useEffect(() => {
     getData();
-  }, [])
+  })
 
   return (
     <div style={styles.container}>
+      <div>
+        <input placeholder='Search'></input>
+        <button>Search</button>
+      </div>
       {/* Loop through array in state and output Content component for each item */}
       {bibles.items.map(bible => {
-        return <Content key={bible.id} data={bible.name} />
+        return <Content key={bible.id} name={bible.name} language={bible.language.name} />
       })}
     </div>
   );

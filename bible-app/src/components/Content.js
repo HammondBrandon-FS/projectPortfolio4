@@ -11,7 +11,8 @@ const Content = props => {
             <ul>
                 <li>
                     {/* Output name of Bible in a list item */}
-                    {props.data}
+                    <h3>{props.language}</h3>
+                    {props.name}
                 </li>
             </ul>
         </div>
