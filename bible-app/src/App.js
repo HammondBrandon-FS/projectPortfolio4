@@ -13,7 +13,7 @@ function App() {
 
   // Constants for API Information
   const url = 'https://api.scripture.api.bible/v1/bibles';
-  const apiKey = '48393b9fab990a5b66b3225ed30151e2';
+  const apiKey = 'b3dc6055a5ff2fac477e057ec84127e1';
 
   // getData connects to API asynchronously
   const getData = async () => {
@@ -28,14 +28,13 @@ function App() {
 
     // Set array in state
     setBibles({
-      items: sortBibles(data.data)
+      items: data.data
     });
-    console.log(data.data);
   }
 
   // Sort bibles by name of language
-  function sortBibles(data) {
-    data.sort((a, b) => {
+  function sortBibles() {
+    bibles.items.sort((a, b) => {
       const nameA = a.language.name.toUpperCase();
       const nameB = b.language.name.toUpperCase();
       if (nameA < nameB) {
@@ -46,14 +45,14 @@ function App() {
       }
       return 0;
     });
-    
-    return data;
   }
 
   // getData after render using useEffect
   useEffect(() => {
     getData();
-  })
+  }, [])
+
+  sortBibles();
 
   return (
     <div style={styles.container}>

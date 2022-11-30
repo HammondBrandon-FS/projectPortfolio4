@@ -12,7 +12,7 @@ const Content = props => {
                 <li>
                     {/* Output name of Bible in a list item */}
                     <h3>{props.language}</h3>
-                    {props.name}
+                    <a href='index.html'>{props.name}</a>
                 </li>
             </ul>
         </div>
