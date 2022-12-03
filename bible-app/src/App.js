@@ -2,9 +2,14 @@
 
 // React Imports
 import React, { useState, useEffect } from 'react';
+import { Routes, Route } from "react-router-dom";
+
 // Components
 import Content from './components/Content';
 import Navigation from './components/Navigation';
+
+// Pages
+import Dashboard from './pages/Dashboard';
 
 function App() {
   // State to hold loaded bibles
@@ -58,6 +63,9 @@ function App() {
   return (
     <div style={styles.container}>
       <Navigation />
+      <Routes>
+        <Route path='/' element={<Dashboard />}/>
+      </Routes>
       <div>
         <input placeholder='Search'></input>
         <button>Search</button>

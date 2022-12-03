@@ -6,7 +6,6 @@ import React from 'react';
 // React Router Imports
 import { NavLink } from 'react-router-dom';
 
-// Data passed to component through props
 const Navigation = () => {
     return (
         <nav style={styles.container}>
