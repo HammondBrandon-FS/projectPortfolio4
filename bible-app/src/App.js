@@ -4,6 +4,7 @@
 import React, { useState, useEffect } from 'react';
 // Components
 import Content from './components/Content';
+import Navigation from './components/Navigation';
 
 function App() {
   // State to hold loaded bibles
@@ -56,6 +57,7 @@ function App() {
 
   return (
     <div style={styles.container}>
+      <Navigation />
       <div>
         <input placeholder='Search'></input>
         <button>Search</button>
