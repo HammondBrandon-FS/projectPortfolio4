@@ -3,7 +3,7 @@
 const Lesson = () => {
     return (
         <div style={styles.container}>
-            
+            <h2>Lesson Plans</h2>
         </div>
     );
 }

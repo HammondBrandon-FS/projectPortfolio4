@@ -15,27 +15,27 @@ const Navigation = () => {
             <div style={styles.links}>
                 <ul style={styles.list}>
                     <li style={styles.item}>
-                        <NavLink>
+                        <NavLink to="/dashboard">
                             Home
                         </NavLink>
                     </li>
                     <li style={styles.item}>
-                        <NavLink>
+                        <NavLink to="/bible">
                             Bible
                         </NavLink>
                     </li>
                     <li style={styles.item}>
-                        <NavLink>
+                        <NavLink to="/readingPlans">
                             Reading Plans
                         </NavLink>
                     </li>
                     <li style={styles.item}>
-                        <NavLink>
+                        <NavLink to="/lessonPlans">
                             Lesson Plans
                         </NavLink>
                     </li>
                     <li style={styles.item}>
-                        <NavLink>
+                        <NavLink to="/worship">
                             Worship
                         </NavLink>
                     </li>

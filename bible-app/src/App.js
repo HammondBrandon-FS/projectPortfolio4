@@ -5,11 +5,14 @@ import React, { useState, useEffect } from 'react';
 import { Routes, Route } from "react-router-dom";
 
 // Components
-import Content from './components/Content';
 import Navigation from './components/Navigation';
 
 // Pages
 import Dashboard from './pages/Dashboard';
+import Bible from './pages/Bible';
+import Reading from './pages/Reading';
+import Lesson from './pages/Lesson';
+import Worship from './pages/Worship';
 
 function App() {
   // State to hold loaded bibles
@@ -65,15 +68,12 @@ function App() {
       <Navigation />
       <Routes>
         <Route path='/' element={<Dashboard />}/>
+        <Route path='/dashboard' element={<Dashboard />}/>
+        <Route path='/bible' element={<Bible data={bibles.items}/>}/>
+        <Route path='/readingPlans' element={<Reading />}/>
+        <Route path='/lessonPlans' element={<Lesson />}/>
+        <Route path='/worship' element={<Worship />}/>
       </Routes>
-      <div>
-        <input placeholder='Search'></input>
-        <button>Search</button>
-      </div>
-      {/* Loop through array in state and output Content component for each item */}
-      {bibles.items.map(bible => {
-        return <Content key={bible.id} name={bible.name} language={bible.language.name} />
-      })}
     </div>
   );
 }
