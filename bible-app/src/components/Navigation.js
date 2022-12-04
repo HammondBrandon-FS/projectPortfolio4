@@ -10,7 +10,7 @@ const Navigation = () => {
     return (
         <nav style={styles.container}>
             <div style={styles.logo}>
-                <p>Company</p>
+                <p>The Word</p>
             </div>
             <div style={styles.links}>
                 <ul style={styles.list}>
@@ -57,7 +57,7 @@ const styles = {
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
-        margin: '0 8%',
+        padding: '0 8%',
         background: '#ffd'
     },
     links: {

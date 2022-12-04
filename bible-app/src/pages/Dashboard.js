@@ -5,10 +5,15 @@ import React from 'react';
 
 // Components
 import Lesson from '../components/Lesson';
+import Plan from '../components/Plan';
+import Footer from '../components/Footer';
 
 // Images
 import Pulpit from '../images/pulpit.jpg';
 import LessonImg from '../images/lesson.jpg';
+import Church from '../images/church.jpg';
+import Group from '../images/group.jpg';
+import Praying from '../images/praying.jpg';
 
 const Dashboard = () => {
     return (
@@ -35,10 +40,13 @@ const Dashboard = () => {
             </section>
             <section style={styles.plans}>
                 <h2>Reading Plans</h2>
+                <div style={styles.readingList}>
+                    <Plan image={Church} title='Church Reading' alt='Church on a hill'/>
+                    <Plan image={Group} title='Small Group Reading' alt='Group of people reading'/>
+                    <Plan image={Praying} title='Individual Reading' alt='Hands praying on Bible'/>
+                </div>
             </section>
-            <footer style={styles.footer}>
-                <p>footer stuff</p>
-            </footer>
+            <Footer />
         </div>
     );
 }
@@ -53,8 +61,9 @@ const styles = {
     },
     hero: {
         background: `url(${Pulpit})`,
-        height: '768px',
-        textAlign: 'center'
+        backgroundSize: 'cover',
+        textAlign: 'center',
+        padding: '18% 0'
     },
     lessons: {
         background: '#fff',
@@ -75,9 +84,14 @@ const styles = {
     },
     plans: {
         background: '#fff',
-        textAlign: 'center'
+        textAlign: 'center',
+        paddingBottom: '4%'
     },
-    footer: {
-        background: '#aaa'
+    readingList: {
+        padding: '0 8%',
+        display: 'flex',
+        flexWrap: 'wrap',
+        justifyContent: 'space-around',
+        rowGap: '40px'
     }
 }
