@@ -1,4 +1,4 @@
-// Reading Plan Component
+// Reading Plan Component for Home Page
 
 const Plan = props => {
     return (
