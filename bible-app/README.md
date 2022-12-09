@@ -7,3 +7,4 @@
     [X] Move API info to correct page.
     [] Create components for repeated elements.
     [] Style pages according to mockups and style tiles.
+    [] Organize Bibles by letter
