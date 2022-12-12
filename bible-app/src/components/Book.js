@@ -24,7 +24,6 @@ const Content = props => {
             }
         });
         const data = await response.json();
-        console.log(data);
         props.setBook(data);
 
         navigate('read', {state: url});

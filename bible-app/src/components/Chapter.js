@@ -10,6 +10,7 @@ const Chapter = props => {
     const location = useLocation();
     const navigate = useNavigate();
     const url = location.state;
+    console.log(url);
     const apiKey = 'b3dc6055a5ff2fac477e057ec84127e1';
 
     //const navigate = useNavigate();
@@ -26,7 +27,7 @@ const Chapter = props => {
 
         props.setChapters(data);
 
-        navigate('read', {state: url});
+        navigate('study', {state: props.url});
     }
 
     return (

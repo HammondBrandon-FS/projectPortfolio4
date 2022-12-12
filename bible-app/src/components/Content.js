@@ -23,6 +23,7 @@ const Content = props => {
         const data = await response.json();
 
         props.setBooks(data);
+        props.setUrl(`https://api.scripture.api.bible/v1/bibles/${props.id}`);
 
         navigate('books', {state: url});
     }

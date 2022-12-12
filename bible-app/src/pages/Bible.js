@@ -72,7 +72,7 @@ const Bible = props => {
             <h2>English Bibles</h2>
             <ul>
                 {english.map(bible => {
-                    return <Content key={bible.id} id={bible.id} name={bible.name} language={bible.language.name} setBooks={props.setBooks} />
+                    return <Content key={bible.id} id={bible.id} name={bible.name} language={bible.language.name} setUrl={props.setUrl} setBooks={props.setBooks} />
                 })}
             </ul>
             <h2>For more languages, click here</h2>
