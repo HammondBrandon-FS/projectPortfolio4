@@ -8,3 +8,8 @@
     [] Create components for repeated elements.
     [] Style pages according to mockups and style tiles.
     [] Organize Bibles by letter
+    [X] Bible links clickable
+    [] Bible navigation functional
+    [] More direction for users
+    [] Favorite scriptures ability
+    [] Accent color overhaul

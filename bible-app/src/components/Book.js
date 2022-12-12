@@ -3,16 +3,19 @@
 
 // React Imports
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 // Data passed to component through props
 const Content = props => {
-    const url = `https://api.scripture.api.bible/v1/bibles/${props.id}/books`;
+    const location = useLocation();
+    const navigate = useNavigate();
+    const url = location.state + `/${props.id}/chapters`;
+    console.log(url);
     const apiKey = 'b3dc6055a5ff2fac477e057ec84127e1';
 
-    const navigate = useNavigate();
+    //const navigate = useNavigate();
 
-    const getBible = async() => {
+    const getBook = async() => {
         // Pass API Key in header
         const response = await fetch(url, {
             method: 'get',
@@ -21,16 +24,16 @@ const Content = props => {
             }
         });
         const data = await response.json();
+        console.log(data);
+        props.setBook(data);
 
-        props.setBooks(data);
-
-        navigate('books', {state: url});
+        navigate('read', {state: url});
     }
 
     return (
         <li>
             {/* Output name of Bible in a list item */}
-            <button onClick={getBible}>{props.name}</button>
+            <button onClick={getBook}>{props.name}</button>
         </li>
     );
 }

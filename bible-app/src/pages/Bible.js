@@ -6,11 +6,12 @@ import React, { useState, useEffect } from 'react';
 //Components
 import Content from '../components/Content';
 
-const Bible = () => {
+const Bible = props => {
+    const english = [];
 
     // State to hold loaded bibles
     const [bibles, setBibles] = useState({
-    items: []
+        items: []
     });
 
     // Constants for API Information
@@ -32,6 +33,7 @@ const Bible = () => {
         setBibles({
             items: data.data
         });
+
     }
 
     // Sort bibles by name of language
@@ -49,19 +51,31 @@ const Bible = () => {
         });
     }
 
+    function separateBibles() {
+        bibles.items.forEach(bible => {
+            if (bible.language.name.toLowerCase() === "english") {
+                english.push(bible);
+            }
+        })
+    }
+
     // getData after render using useEffect
     useEffect(() => {
         getData();
     }, [])
 
     sortBibles();
+    separateBibles();
 
     return (
         <div style={styles.container}>
-            <h2>Bible Library</h2>
-            {bibles.items.map(bible => {
-                return <Content key={bible.id} name={bible.name} language={bible.language.name} />
-            })}
+            <h2>English Bibles</h2>
+            <ul>
+                {english.map(bible => {
+                    return <Content key={bible.id} id={bible.id} name={bible.name} language={bible.language.name} setBooks={props.setBooks} />
+                })}
+            </ul>
+            <h2>For more languages, click here</h2>
         </div>
     );
 }
