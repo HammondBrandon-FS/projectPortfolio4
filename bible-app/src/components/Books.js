@@ -1,18 +1,14 @@
 // Books Page
-
+import {useLocation } from 'react-router-dom';
 import Book from '../components/Book';
 
-import { useLocation } from 'react-router-dom';
-
-const Books = props => {
+const Books = () => {
     const location = useLocation();
-    console.log(location.url);
-
     return (
         <div>
             <h2>Books of the Bible</h2>
-            {props.data.data.map(book => {
-                return <Book key={book.id} id={book.id} name={book.name} setBook={props.setBook} />
+            {location.state.data.data.map(book => {
+                return <Book key={book.id} id={book.id} name={book.name} />
             })}
         </div>
     )

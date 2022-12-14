@@ -1,41 +1,34 @@
 // Bibles Page Component
 
 // React Imports
-import React, { useEffect } from 'react';
-
+import React from 'react';
+import { useLocation } from 'react-router-dom';
 //Components
 
 
-const Study = props => {
-    // Constants for API Information
-    const url = props.url + `/chapters/${props.id}/verses`;
-    console.log(url);
-    const apiKey = 'b3dc6055a5ff2fac477e057ec84127e1';
-
-    // getData connects to API asynchronously
-    const getData = async () => {
-        // Pass API Key in header
-        const response = await fetch(url, {
-            method: 'get',
-            headers: {
-            'api-key': apiKey
-            }
-        });
-        const data = await response.json();
-
-        console.log(data);
-
+const Study = () => {
+    const location = useLocation();
+    const verses = [];
+    const passage = location.state.data.data.content;
+    console.log(passage);
+    for (let i = 0; i < passage.length; i++) {
+        let para = passage[i].items;
+        if(para.length > 0) {
+            para.forEach(e => {
+                if(e.text) {
+                    verses.push(e.text + ' ');
+                }
+                else if (e.items[0].text) {
+                    verses.push(e.items[0].text + ' ');
+                }
+            })
+        }
     }
-
-    // getData after render using useEffect
-    useEffect(() => {
-        getData();
-    }, [])
-
+    console.log(verses);
     return (
         <div style={styles.container}>
-            <h2>English Bibles</h2>
-            <p></p>
+            <h2>{location.state.name}</h2>
+            {verses}
         </div>
     );
 }

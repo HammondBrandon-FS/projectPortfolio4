@@ -9,28 +9,26 @@ import { useNavigate, useLocation } from 'react-router-dom';
 const Content = props => {
     const location = useLocation();
     const navigate = useNavigate();
-    const url = location.state + `/${props.id}/chapters`;
-    console.log(url);
+    const url = location.state.url;
     const apiKey = 'b3dc6055a5ff2fac477e057ec84127e1';
 
     //const navigate = useNavigate();
 
     const getBook = async() => {
         // Pass API Key in header
-        const response = await fetch(url, {
+        const response = await fetch(url + `/books/${props.id}/chapters`, {
             method: 'get',
             headers: {
             'api-key': apiKey
             }
         });
         const data = await response.json();
-        props.setBook(data);
 
-        navigate('read', {state: url});
+        navigate('read', {state:{ url: url, data: data}});
     }
 
     return (
-        <li>
+        <li style={styles.container}>
             {/* Output name of Bible in a list item */}
             <button onClick={getBook}>{props.name}</button>
         </li>
@@ -42,7 +40,6 @@ export default Content;
 // Styles
 const styles = {
     container: {
-        display: 'flex',
-        flexDirection: 'column'
+        
     }
 }
