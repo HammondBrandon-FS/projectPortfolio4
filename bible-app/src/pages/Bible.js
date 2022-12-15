@@ -8,6 +8,7 @@ import Cross from '../images/cross.jpg';
 
 //Components
 import Content from '../components/Content';
+import Footer from '../components/Footer';
 
 const Bible = () => {
     const english = [];
@@ -83,6 +84,7 @@ const Bible = () => {
                     })}
                 </ul>
             </div>
+            <Footer />
         </div>
         
     );

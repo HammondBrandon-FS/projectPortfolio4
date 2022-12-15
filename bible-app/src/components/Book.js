@@ -1,8 +1,6 @@
 //Child/Dummy Content.js
 //Parent - App.js
 
-import './content.css'
-
 // React Imports
 import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
@@ -30,20 +28,11 @@ const Content = props => {
     }
 
     return (
-        <li style={styles.container}>
+        <li>
             {/* Output name of Bible in a list item */}
-            <button className='button' style={styles.button} onClick={getBook}>{props.name}</button>
+            <button className='item' onClick={getBook}>{props.name}</button>
         </li>
     );
 }
 
 export default Content;
-
-// Styles
-const styles = {
-    button: {
-        fontSize: '1.2em',
-        background: 'none',
-        border: 'none'
-    }
-}

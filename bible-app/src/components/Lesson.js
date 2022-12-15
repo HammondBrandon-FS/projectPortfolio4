@@ -24,7 +24,7 @@ const styles = {
         height: 'auto'
     },
     title: {
-        margin: '0',
+        margin: '2%',
         color: '#151C22'
     }
 }

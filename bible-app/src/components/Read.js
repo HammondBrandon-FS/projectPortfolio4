@@ -3,12 +3,18 @@
 // Image
 import Bible from '../images/bible.jpg';
 
+// Components
+import Button from '../components/Button';
+
 const Read = props => {
     return (
         <div style={styles.container}>
-            <img style={styles.image} src={Bible} alt='cross on Bible'></img>
-            <h3 style={styles.heading}>{props.title}</h3>
-            <p>{props.desc}</p>
+            <img src={Bible} alt='cross on Bible'></img>
+            <div style={styles.text}>
+                <h3 style={styles.heading}>{props.title}</h3>
+                <p>{props.desc}</p>
+                <Button style={styles.button} label='Read' />
+            </div>
         </div>
     );
 }
@@ -17,14 +23,12 @@ export default Read;
 
 const styles = {
     container: {
-        width: '26%',
-        border: '1px solid red',
-        overflow: 'hidden',
-        marginBottom: '2%'
+        inlineSize: 'min-content',
+        textAlign: 'center'
     },
-    image: {
-        width: '100%',
-        height: 'auto'
+    text: {
+        border: '1px solid #151C22',
+        padding: '2% 0'
     },
     heading: {
         textAlign: 'center',

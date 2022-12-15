@@ -6,6 +6,9 @@ import React from 'react';
 // React Router Imports
 import { NavLink } from 'react-router-dom';
 
+// Components
+import Button from './Button';
+
 const Navigation = () => {
     return (
         <nav style={styles.container}>
@@ -88,7 +91,7 @@ const Navigation = () => {
             </div>
             <div style={styles.buttons}>
                 <button style={styles.logIn}>Log In</button>
-                <button style={styles.signUp}>Sign Up</button>
+                <Button label='Sign Up' />
             </div>
         </nav>
     );
