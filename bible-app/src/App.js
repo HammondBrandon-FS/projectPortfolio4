@@ -42,6 +42,7 @@ export default App;
 // Styles
 const styles = {
   container: {
-    background: '#e5e9f1'
+    background: '#DFDFD5',
+    margin: '2.5% 0 0 0'
   }
 }

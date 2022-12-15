@@ -5,11 +5,11 @@
     [X] Display API information on screen.
     [] Get all pages set up.
     [X] Move API info to correct page.
-    [] Create components for repeated elements.
+    [X] Create components for repeated elements.
     [] Style pages according to mockups and style tiles.
     [] Organize Bibles by letter
     [X] Bible links clickable
-    [] Bible navigation functional
-    [] More direction for users
+    [X] Bible navigation functional
+    [X] More direction for users
     [] Favorite scriptures ability
-    [] Accent color overhaul
+    [X] Accent color overhaul

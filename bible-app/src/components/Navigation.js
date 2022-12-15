@@ -9,41 +9,86 @@ import { NavLink } from 'react-router-dom';
 const Navigation = () => {
     return (
         <nav style={styles.container}>
-            <div style={styles.logo}>
-                <p>The Word</p>
+            <div>
+                <h1 style={styles.logo}>The Word</h1>
             </div>
             <div style={styles.links}>
                 <ul style={styles.list}>
-                    <li style={styles.item}>
-                        <NavLink to="/dashboard">
+                    <li>
+                        <NavLink to="/dashboard" style={({ isActive }) => ({
+                            color: isActive ? '#806A57' : '#151C22',
+                            fontWeight: isActive ? 'bold' : '400',
+                            fontSize: '1.1em',
+                            borderBottom: isActive ? '2px solid #806A57' : 'none',
+                            display: 'flex',
+                            width: '100%',
+                            alignItems: 'center',
+                            textDecoration: 'none'
+                        })}>
                             Home
                         </NavLink>
                     </li>
-                    <li style={styles.item}>
-                        <NavLink to="/bible">
+                    <li>
+                        <NavLink to="/bible" style={({ isActive }) => ({
+                            color: isActive ? '#806A57' : '#151C22',
+                            fontWeight: isActive ? 'bold' : '400',
+                            fontSize: '1.1em',
+                            borderBottom: isActive ? '2px solid #806A57' : 'none',
+                            display: 'flex',
+                            width: '100%',
+                            alignItems: 'center',
+                            textDecoration: 'none'
+                        })}>
                             Bible
                         </NavLink>
                     </li>
-                    <li style={styles.item}>
-                        <NavLink to="/readingPlans">
+                    <li>
+                        <NavLink to="/readingPlans" style={({ isActive }) => ({
+                            color: isActive ? '#806A57' : '#151C22',
+                            fontWeight: isActive ? 'bold' : '400',
+                            fontSize: '1.1em',
+                            borderBottom: isActive ? '2px solid #806A57' : 'none',
+                            display: 'flex',
+                            width: '100%',
+                            alignItems: 'center',
+                            textDecoration: 'none'
+                        })}>
                             Reading Plans
                         </NavLink>
                     </li>
-                    <li style={styles.item}>
-                        <NavLink to="/lessonPlans">
+                    <li>
+                        <NavLink to="/lessonPlans" style={({ isActive }) => ({
+                            color: isActive ? '#806A57' : '#151C22',
+                            fontWeight: isActive ? 'bold' : '400',
+                            fontSize: '1.1em',
+                            borderBottom: isActive ? '2px solid #806A57' : 'none',
+                            display: 'flex',
+                            width: '100%',
+                            alignItems: 'center',
+                            textDecoration: 'none'
+                        })}>
                             Lesson Plans
                         </NavLink>
                     </li>
-                    <li style={styles.item}>
-                        <NavLink to="/worship">
+                    <li>
+                        <NavLink to="/worship" style={({ isActive }) => ({
+                            color: isActive ? '#806A57' : '#151C22',
+                            fontWeight: isActive ? 'bold' : '400',
+                            fontSize: '1.1em',
+                            borderBottom: isActive ? '2px solid #806A57' : 'none',
+                            display: 'flex',
+                            width: '100%',
+                            alignItems: 'center',
+                            textDecoration: 'none'
+                        })}>
                             Worship
                         </NavLink>
                     </li>
                 </ul>
             </div>
             <div style={styles.buttons}>
-                <button>Sign Up</button>
-                <button>Log In</button>
+                <button style={styles.logIn}>Log In</button>
+                <button style={styles.signUp}>Sign Up</button>
             </div>
         </nav>
     );
@@ -58,10 +103,22 @@ const styles = {
         justifyContent: 'space-between',
         alignItems: 'center',
         padding: '0 8%',
-        background: '#ffd'
+        margin: 'auto',
+        background: '#DFDFD5',
+        borderBottom: '2px solid #806A57',
+        position: 'fixed',
+        top: '0',
+        width: '100%',
+        boxSizing: 'border-box'
+    },
+    logo: {
+        color: '#806A57',
+        fontWeight: 'bold',
+        fontSize: '2em',
+        margin: '0'
     },
     links: {
-        width: '30%'
+        width: '33%'
     },
     list: {
         display: 'flex',
@@ -70,10 +127,20 @@ const styles = {
         padding: '0',
         margin: '0'
     },
-    item: {
-        
-    },
     buttons: {
         display: 'flex'
+    },
+    signUp: {
+        background: '#4F9AD8',
+        color: '#fff',
+        padding: '8px 20px',
+        border: 'none',
+        fontSize: '1.1em'
+    },
+    logIn: {
+        background: 'none',
+        padding: '8px 20px',
+        border: 'none',
+        fontSize: '1.1em'
     }
 }
