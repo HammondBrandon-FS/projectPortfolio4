@@ -9,6 +9,7 @@ const Lesson = () => {
         <div>
             <div style={styles.container}>
                 <h2 style={styles.heading}>Lesson Plans</h2>
+                {/* List of Lessons */}
                 <div style={styles.lessons}>
                     <Less title='The book of Mark' desc='Verse by verse analysis and commentary.'/>
                     <Less title='The book of Job' desc='Verse by verse analysis and commentary.'/>

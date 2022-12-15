@@ -10,12 +10,15 @@ import Cong from '../images/cong.jpg'
 const Worship = () => {
     return (
         <div>
+            {/* Hero Image */}
             <div style={styles.hero}>
                 <h2 style={styles.heading}>Worship</h2>
             </div>
+            {/* Setlist Container */}
             <div style={styles.container}>
                 <div style={styles.set}>
                     <h3 style={styles.title}>Setlist for Sunday July 23</h3>
+                    {/* List of Songs */}
                     <ul style={styles.list}>
                         <li style={styles.item}>
                             <p style={styles.label}>How Great is Our God</p>

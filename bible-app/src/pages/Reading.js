@@ -9,6 +9,7 @@ const Reading = () => {
         <div>
             <div style={styles.container}>
                 <h2 style={styles.heading}>Reading Plans</h2>
+                {/* List of Reading Plans */}
                 <div style={styles.plans}>
                     <Read title='Chronological' desc='Read through the Bible in the order in which events and stories occured.'/>
                     <Read title='Book Order' desc='Read the Bible from start to finish, from Genesis to Revelation.'/>

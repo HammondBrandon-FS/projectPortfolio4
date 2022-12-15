@@ -1,6 +1,4 @@
-// Button component
-
-//import './button.css'
+// Button component pre-styled to accept different labels
 
 const Button = props => {
     return(

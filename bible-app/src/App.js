@@ -18,7 +18,6 @@ import Explore from './components/Explore';
 import Study from './components/Study';
 
 function App() {
-
   return (
     <div style={styles.container}>
       <Navigation />
@@ -43,6 +42,7 @@ export default App;
 const styles = {
   container: {
     background: '#DFDFD5',
+    //Margin to account for nav
     margin: '2.5% 0 0 0'
   }
 }

@@ -1,8 +1,5 @@
 // Dashboard Page Component
 
-// React Imports
-import React from 'react';
-
 // Components
 import Lesson from '../components/Lesson';
 import Plan from '../components/Plan';
@@ -18,13 +15,18 @@ import Open from '../images/open.jpg';
 
 const Dashboard = () => {
     return (
+        // Page Container
         <div style={styles.container}>
+            {/* Hero Image */}
             <div style={styles.hero}>
+                {/* Hero Text */}
                 <h2 style={styles.heading}>User's Dashboard</h2>
             </div>
+            {/* Current Lessons Section */}
             <section style={styles.lessons}>
                 <h2 style={styles.sections}>Current Lessons</h2>
                 <p style={styles.para}>This section contains all of the current lessons you are subscribed to. Click the picture to open the lesson.</p>
+                {/* List of Lessons */}
                 <div style={styles.lessonList}>
                     <Lesson image={LessonImg} alt='Open bible on table' title='The book of Mark'/>
                     <Lesson image={LessonImg} alt='Open bible on table' title='The book of Job'/>
@@ -34,13 +36,16 @@ const Dashboard = () => {
                     <Lesson image={LessonImg} alt='Open bible on table' title='Old Testament Prophecy'/>
                 </div>
             </section>
+            {/* Daily Verse Section */}
             <section style={styles.verse}>
                 <h2 style={styles.verseHead}>Daily Verse</h2>
                 <p style={styles.versePara}>4 “You shall not make for yourself an image in the form of anything in heaven above or on the earth beneath or in the waters below. 5 You shall not bow down to them or worship them; for I, the Lord your God, am a jealous God, punishing the children for the sin of the parents to the third and fourth generation of those who hate me, 6 but showing love to a thousand generations of those who love me and keep my commandments.</p>
                 <p style={styles.verseBook}>-Exodus 20:4-6</p>
             </section>
+            {/* Reading Plans Section */}
             <section style={styles.plans}>
                 <h2 style={styles.sections}>Reading Plans</h2>
+                {/* Reading Plans List */}
                 <div style={styles.readingList}>
                     <Plan image={Church} title='Church Reading' description='Keep up with the rest of the congregation and prepare for the next Sunday sermon.' alt='Church on a hill'/>
                     <Plan image={Group} title='Small Group Reading' description='Track your reading progress in your small group and assign chapters and verses each week.' alt='Group of people reading'/>
@@ -98,7 +103,7 @@ const styles = {
         rowGap: '40px'
     },
     verse: {
-        padding: '0 8%',
+        padding: '4% 8%',
         background: `url(${Open})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',

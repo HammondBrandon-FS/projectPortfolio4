@@ -40,7 +40,7 @@ const Bible = () => {
 
     }
 
-    // Sort bibles by name of language
+    // Sort Bibles by name of language
     function sortBibles() {
         bibles.items.sort((a, b) => {
         const nameA = a.language.name.toUpperCase();
@@ -55,6 +55,7 @@ const Bible = () => {
         });
     }
 
+    // Separate English Bibles from list
     function separateBibles() {
         bibles.items.forEach(bible => {
             if (bible.language.name.toLowerCase() === "english") {
@@ -68,16 +69,19 @@ const Bible = () => {
         getData();
     }, [])
 
+    // Sort and Separate Bibles
     sortBibles();
     separateBibles();
 
     return (
         <div>
+            {/* Hero Image */}
             <div style={styles.hero}>
                 <h2 style={styles.heading}>Choose a Bible</h2>
             </div>
             <div style={styles.container}>
                 <h2 style={styles.title}>English Bibles</h2>
+                {/* English Bibles List */}
                 <ul style={styles.list}>
                     {english.map(bible => {
                         return <Content key={bible.id} id={bible.id} name={bible.name} language={bible.language.name} apiKey={apiKey}/>

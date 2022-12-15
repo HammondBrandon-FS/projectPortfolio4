@@ -13,10 +13,12 @@ const Explore = () => {
     const location = useLocation();
     return (
         <div>
+            {/* Hero Image */}
             <div style={styles.hero}>
                 <h2 style={styles.heading}>Chapters</h2>
             </div>
             <div>
+                {/* Chapters List */}
                 {location.state.data.data.map(chapter => {
                     return <Chapter key={chapter.id} id={chapter.id} name={chapter.reference} />
                 })}

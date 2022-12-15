@@ -1,8 +1,7 @@
 //Child/Dummy Content.js
 //Parent - App.js
 
-// React Imports
-import React from 'react';
+// React Router Imports
 import { useNavigate, useLocation } from 'react-router-dom';
 
 // Data passed to component through props
@@ -12,7 +11,6 @@ const Content = props => {
     const url = location.state.url;
     const apiKey = 'b3dc6055a5ff2fac477e057ec84127e1';
 
-    //const navigate = useNavigate();
 
     const getBook = async() => {
         // Pass API Key in header
@@ -24,6 +22,7 @@ const Content = props => {
         });
         const data = await response.json();
 
+        // Navigate to next page sending url and data states
         navigate('read', {state:{ url: url, data: data}});
     }
 

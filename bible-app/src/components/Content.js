@@ -21,6 +21,7 @@ const Content = props => {
         const data = await response.json();
         console.log(data);
 
+        // Navigate to next page with data states
         navigate('books', {state: {data: data, url: url}});
         
     }

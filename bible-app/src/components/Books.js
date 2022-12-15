@@ -10,10 +10,12 @@ const Books = () => {
     const location = useLocation();
     return (
         <div>
+            {/* Hero Image */}
             <div style={styles.hero}>
                 <h2 style={styles.heading}>Books</h2>
             </div>
             <div style={styles.container}>
+                {/* Book List */}
                 {location.state.data.data.map(book => {
                     return <Book key={book.id} id={book.id} name={book.name} />
                 })}

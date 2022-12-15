@@ -1,9 +1,7 @@
 // Bibles Page Component
 
-// React Imports
-import React from 'react';
+// React Router Imports
 import { useLocation } from 'react-router-dom';
-//Components
 
 // Images
 import Cross from '../images/cross.jpg';

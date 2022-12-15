@@ -2,10 +2,9 @@
 //Parent - App.js
 
 // React Imports
-import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 
-// Data passed to component through props
+// Data passed to component through props/location
 const Chapter = props => {
     const location = useLocation();
     const navigate = useNavigate();
@@ -25,6 +24,8 @@ const Chapter = props => {
         });
         const data = await response.json();
         console.log(data);
+
+        // Navigate to new page with data states
         navigate('study',{state:{data: data, url: url, name: chapter}});
     }
 

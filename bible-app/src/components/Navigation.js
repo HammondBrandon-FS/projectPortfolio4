@@ -16,6 +16,7 @@ const Navigation = () => {
                 <h1 style={styles.logo}>The Word</h1>
             </div>
             <div style={styles.links}>
+                {/* NavLinks to routed pages */}
                 <ul style={styles.list}>
                     <li>
                         <NavLink to="/dashboard" style={({ isActive }) => ({

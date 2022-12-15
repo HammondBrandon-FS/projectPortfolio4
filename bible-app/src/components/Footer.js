@@ -14,6 +14,7 @@ const Footer = () => {
                 <h3 style={styles.title}>The Word</h3>
                 <p style={styles.para}>We are the connection that the congregation has been missing. Small Groups, Pastors, Worship Leaders, and Individuals can all utilize our product and even grow in their spiritual journey.</p>
                 <div>
+                    {/* Social Media Icons */}
                     <ul style={styles.social}>
                         <li>
                             <img src={FB} alt='facebook logo' />
