@@ -5,6 +5,9 @@ import React from 'react';
 import { useLocation } from 'react-router-dom';
 //Components
 
+// Images
+import Cross from '../images/cross.jpg';
+
 
 const Study = () => {
     const location = useLocation();
@@ -26,10 +29,15 @@ const Study = () => {
     }
     console.log(verses);
     return (
-        <div style={styles.container}>
-            <h2>{location.state.name}</h2>
-            {verses}
+        <div>
+            <div style={styles.hero}>
+                <h2 style={styles.heading}>{location.state.name}</h2>
+            </div>
+            <div style={styles.container}>
+                {verses}
+            </div>
         </div>
+        
     );
 }
 
@@ -37,6 +45,21 @@ export default Study;
 
 const styles = {
     container: {
-        padding: '0 8%'
+        padding: '1% 8%',
+        fontSize: '1.3em'
+    },
+    hero: {
+        background: `url(${Cross})`,
+        backgroundSize: 'cover',
+        textAlign: 'center',
+        padding: '18% 0',
+        boxShadow: '0px 10px 10px #806A57 inset'
+    },
+    heading: {
+        color: '#FEF6C2',
+        fontSize: '3em',
+        padding: '0',
+        margin: '0',
+        textShadow: '2px 2px 1px black'
     }
 }
