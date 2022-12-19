@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/bibleapp-deployment/static/css/main.4fc15c7f.css",
+    "main.js": "/bibleapp-deployment/static/js/main.b524f0ca.js",
+    "static/js/787.f89b6947.chunk.js": "/bibleapp-deployment/static/js/787.f89b6947.chunk.js",
+    "static/media/cross.jpg": "/bibleapp-deployment/static/media/cross.5d1ec67cfdfe81d49432.jpg",
+    "static/media/open.jpg": "/bibleapp-deployment/static/media/open.9ddbba666dd99140597d.jpg",
+    "static/media/cong.jpg": "/bibleapp-deployment/static/media/cong.417949166c65560d5986.jpg",
+    "static/media/pulpit.jpg": "/bibleapp-deployment/static/media/pulpit.3bac0e1a5ec0d0f6fd7a.jpg",
+    "static/media/lesson.jpg": "/bibleapp-deployment/static/media/lesson.996c6710dd0c6cc81436.jpg",
+    "index.html": "/bibleapp-deployment/index.html",
+    "main.4fc15c7f.css.map": "/bibleapp-deployment/static/css/main.4fc15c7f.css.map",
+    "main.b524f0ca.js.map": "/bibleapp-deployment/static/js/main.b524f0ca.js.map",
+    "787.f89b6947.chunk.js.map": "/bibleapp-deployment/static/js/787.f89b6947.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4fc15c7f.css",
+    "static/js/main.b524f0ca.js"
+  ]
+}
